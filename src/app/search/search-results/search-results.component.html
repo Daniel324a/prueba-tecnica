@@ -1,0 +1,14 @@
+<div class="flex flex-wrap gap-3" *ngIf="!isLoading; else loading">
+  <div
+    class="flex flex-col w-full h-56 p-2 text-gray-700 border border-gray-200 rounded-md overflow-hidden sm:w-64"
+    *ngFor="let post of results"
+  >
+    <p class="text-xl truncate">{{ post.title | titlecase }}</p>
+    <p class="font-light text-justify grow">{{ post.body }}</p>
+    <p>-{{ getAuthor(post.userId) }}</p>
+  </div>
+</div>
+
+<ng-template #loading>
+  <code class="text-xl text-gray-600">loading...</code>
+</ng-template>

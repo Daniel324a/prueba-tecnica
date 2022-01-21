@@ -1,0 +1,25 @@
+<div class="flex flex-col gap-2 h-auto sm:flex-row">
+  <input
+    class="grow p-2 border border-gray-200 rounded-md transition-all transform hover:bg-gray-100 focus:border-gray-300"
+    placeholder="Search Post by Title..."
+    type="search"
+    (keyup.enter)="search()"
+    [disabled]="isLoading"
+    #inputSearch
+  />
+
+  <select class="p-2 border border-gray-200 rounded-md" #selectAuthor [disabled]="isLoading">
+    <option [defaultSelected]="true" value="">Cualquier Autor</option>
+    <option *ngFor="let author of authors" [value]="author.id">
+      {{ author.name }}
+    </option>
+  </select>
+
+  <button
+    [disabled]="isLoading"
+    (click)="search()"
+    class="p-2 bg-blue-500 text-white rounded-md ring-blue-500 ring-0 transition-all transform hover:ring-2 disabled:bg-blue-300 disabled:ring-blue-300"
+  >
+    Buscar
+  </button>
+</div>

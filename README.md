@@ -2,26 +2,32 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.4.
 
-## Development server
+---
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Guide
 
-## Code scaffolding
+You can use the search bar to get the posts provided by [JsonPlaceholder](https://jsonplaceholder.typicode.com/), further that, you'll be able to use a select field to filter by an specific author as shown in the below picture.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+![alt example](https://raw.githubusercontent.com/Daniel324a/prueba-tecnica/main/repoResources/img.png)
 
-## Build
+`Note: the search bar filter posts by exact match on titles, pj: "qui est esse".`
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+---
 
-## Running unit tests
+## Tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+---
 
-## Running end-to-end tests
+## Commands
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Start development server
 
-## Further help
+`ng serve -o`
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### Build app for production
+
+`ng build`
+
+### Running unit tests
+
+`ng test`
